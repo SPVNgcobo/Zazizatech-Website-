@@ -7,9 +7,9 @@
 
 /* Color Variables */
 :root {
-    --color-teal: #008080;
+    --color-teal: #333333;
     --color-peach: #FFA07A;
-    --color-dark-gray: #333333;
+    --color-dark-gray: #008080;
     --color-light-gray: #f4f4f4; /* For section backgrounds */
     --color-medium-gray: #555; /* For secondary text */
     --color-off-white: #f9f9f9; /* For alternating section backgrounds */
