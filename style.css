@@ -92,6 +92,11 @@ a:hover {
     color: var(--color-peach);
 }
 
+/* Visited Link Color */
+a:visited {
+    color: var(--color-peach); /* Change to peach after visited */
+}
+
 .btn {
     display: inline-block;
     padding: 12px 25px;
@@ -127,7 +132,7 @@ a:hover {
 
 /* Header & Navigation */
 .main-header {
-    background-color: var(--color-teal);
+    background-color: var(--color-dark-gray);
     color: #fff;
     padding: 15px 0;
     position: sticky;
@@ -142,12 +147,20 @@ a:hover {
     align-items: center;
 }
 
-.main-header .logo a {
+/* Styling for the logo image */
+.main-header .logo img {
+    height: 40px; /* Adjust height as needed for your logo. Common values: 30px-60px */
+    width: auto; /* Maintain aspect ratio */
+    vertical-align: middle; /* Align nicely with nav items */
+}
+
+/* Old rule for text logo, can be removed or commented out */
+/* .main-header .logo a {
     color: #fff;
     font-family: 'Exo', sans-serif;
     font-size: 1.8em;
     font-weight: 700;
-}
+} */
 
 .main-nav ul {
     list-style: none;
@@ -256,9 +269,16 @@ section:nth-of-type(even) { /* Alternate background for better visual separation
     align-items: center;
     justify-content: center;
     opacity: 0;
-    transition: opacity 1s ease-in-out; /* Smooth fade transition */
     text-align: center;
+    /* Zoom effect on hover */
+    transition: opacity 1s ease-in-out, transform 0.5s ease;
 }
+
+/* Zoom effect on hover for active slide */
+.carousel-slide.active:hover {
+    transform: scale(1.02); /* Slightly zoom in */
+}
+
 
 .carousel-slide.active {
     opacity: 1;
@@ -542,7 +562,7 @@ section:nth-of-type(even) { /* Alternate background for better visual separation
 /* Footer */
 .main-footer {
     background-color: #1a252f; /* Even darker shade, could also be a variant of dark-gray */
-    color: #f0f0f0;
+    color: var(--color-light-gray); /* IMPROVED: Changed from #f0f0f0 for better readability */
     padding: 30px 0;
     text-align: center;
     font-size: 0.9em;
@@ -562,7 +582,7 @@ section:nth-of-type(even) { /* Alternate background for better visual separation
 }
 
 .footer-nav ul li a {
-    color: #f0f0f0;
+    color: var(--color-light-gray); /* IMPROVED: Changed from #f0f0f0 */
 }
 
 .footer-nav ul li a:hover {
@@ -701,9 +721,16 @@ section:nth-of-type(even) { /* Alternate background for better visual separation
     align-items: center;
     justify-content: center;
     opacity: 0;
-    transition: opacity 1s ease-in-out;
     text-align: center;
+    /* Zoom effect on hover */
+    transition: opacity 1s ease-in-out, transform 0.5s ease;
 }
+
+/* Zoom effect on hover for active slide */
+.team-carousel-slide.active:hover {
+    transform: scale(1.02); /* Slightly zoom in */
+}
+
 
 .team-carousel-slide.active {
     opacity: 1;
@@ -940,5 +967,3 @@ section:nth-of-type(even) { /* Alternate background for better visual separation
         font-size: 1em;
     }
 }
-
-
