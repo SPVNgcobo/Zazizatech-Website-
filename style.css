@@ -474,33 +474,48 @@ section:nth-of-type(even) { /* Alternate background for better visual separation
 .contact-section {
     background-color: var(--color-dark-gray);
     color: #fff;
+    padding: 80px 0; /* Ensure enough top/bottom padding for the section itself */
+    display: flex; /* Make it a flex container */
+    flex-direction: column; /* Stack children vertically */
+    align-items: center; /* Center content horizontally */
+    text-align: center; /* Center text within each block */
 }
 
+/* Adjustments for h2 within contact-section */
 .contact-section h2 {
-    color: #fff;
+    color: var(--color-dark-gray);
+    margin-bottom: 20px; /* Give a consistent margin after the main heading */
 }
 
+/* Adjustments for section-intro within contact-section */
 .contact-section .section-intro {
-    color: #f0f0f0;
+    color: var(--color-dark-gray);
+    margin-bottom: 40px; /* Ensure good space before contact info/form */
+    max-width: 700px;
+    text-align: center; /* Explicitly center this text */
 }
 
+/* Contact Info styling - ensure it has vertical space */
 .contact-info {
+    color: var(--color-teal);
     text-align: center;
-    margin-bottom: 30px;
+    margin-bottom: 30px; /* Space between contact info and the form */
     font-size: 1.1em;
 }
 
 .contact-info a {
     color: var(--color-peach);
+    display: block; /* Make links block level to stack them vertically easily */
+    margin-bottom: 8px; /* Space between contact lines */
 }
 
 .whatsapp-btn {
-    background-color: #25D366; /* WhatsApp green - kept for brand recognition */
+    background-color: #25D366;
     color: #fff;
     padding: 8px 15px;
     border-radius: 5px;
     font-weight: 600;
-    margin-top: 10px;
+    margin-top: 15px; /* More space above WhatsApp button */
     display: inline-block;
 }
 
@@ -510,12 +525,14 @@ section:nth-of-type(even) { /* Alternate background for better visual separation
 
 .contact-form {
     max-width: 600px;
-    margin: 0 auto 30px;
+    width: 90%; /* Ensure it doesn't get too wide on larger screens, but flexible */
+    margin: 0 auto; /* Center the form */
     background-color: #fff;
     padding: 40px;
     border-radius: 8px;
     box-shadow: 0 5px 20px rgba(0,0,0,0.2);
-    color: var(--color-dark-gray); /* Form text color */
+    color: var(--color-dark-gray);
+    /* No top margin needed here as section-intro's bottom margin pushes it down */
 }
 
 .contact-form label {
@@ -523,12 +540,13 @@ section:nth-of-type(even) { /* Alternate background for better visual separation
     margin-bottom: 8px;
     font-weight: 600;
     color: var(--color-dark-gray);
+    text-align: left; /* Align labels to the left within the form */
 }
 
 .contact-form input[type="text"],
 .contact-form input[type="email"],
 .contact-form textarea {
-    width: calc(100% - 20px); /* Adjust for padding */
+    width: 100%; /* Make input fields full width of their container */
     padding: 12px 10px;
     margin-bottom: 20px;
     border: 1px solid #ccc;
@@ -546,17 +564,20 @@ section:nth-of-type(even) { /* Alternate background for better visual separation
     padding: 15px;
     font-size: 1.1em;
     cursor: pointer;
+    margin-top: 10px; /* Space above submit button */
 }
 
 .social-links {
     text-align: center;
-    margin-top: 20px;
+    margin-top: 40px; /* Increased margin to separate from the form */
+    margin-bottom: 20px; /* Ensure space before footer on very small screens */
 }
 
 .social-links a {
     color: var(--color-peach);
     margin: 0 15px;
     font-size: 1.1em;
+    display: inline-block; /* Keep social links inline */
 }
 
 /* Footer */
@@ -687,7 +708,7 @@ section:nth-of-type(even) { /* Alternate background for better visual separation
 }
 
 
-/* NEW: Team Carousel Section Styles */
+/* Team Carousel Section Styles */
 .team-carousel-section {
     background-color: var(--color-light-gray); /* Lighter background for team section */
     padding: 80px 0;
@@ -890,6 +911,7 @@ section:nth-of-type(even) { /* Alternate background for better visual separation
 
     .contact-form {
         padding: 20px;
+        width: 90%; /* Keep this for mobile */
     }
 
     .main-footer .container {
